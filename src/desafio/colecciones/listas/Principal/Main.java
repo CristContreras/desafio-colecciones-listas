@@ -46,7 +46,8 @@ public class Main {
             continuarCompra=teclado.nextInt();
         }
         System.out.println("\tTicket de compra");
-        System.out.print("Producto\tPrecio\tCantidad\n");
+        System.out.println("Numero de ticket: "+ticketCompra.getNumeroTicket());
+        System.out.println("Fecha: "+ticketCompra.getFechaActual());
         List<Producto> productos = ticketCompra.getAll();
         productos.forEach(producto -> {
             System.out.println(producto);

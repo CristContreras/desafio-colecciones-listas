@@ -1,5 +1,7 @@
 package desafio.colecciones.listas.modelos;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -8,11 +10,18 @@ public class TicketCompra {
     private int numeroTicket;
     private List<Producto> listaProductos;
     private double totalCompra;
+    private LocalDate fechaActual= LocalDate.now();
     Random random = new Random();
 
     public TicketCompra(){
         listaProductos=new ArrayList<>();
         numeroTicket=random.nextInt(345);
+    }
+
+    public String getFechaActual(){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String fechaHoraFormateada = fechaActual.format(formatter);
+        return fechaHoraFormateada;
     }
 
     public void calcularTotal(){

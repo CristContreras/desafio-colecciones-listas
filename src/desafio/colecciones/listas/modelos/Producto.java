@@ -37,6 +37,6 @@ public class Producto {
 
     @Override
     public String toString() {
-        return getNombreProducto()+"\t\t"+getPrecioProducto()+"\t\t"+getCantidadProducto();
+        return getNombreProducto()+" - $"+getPrecioProducto()+" - "+getCantidadProducto();
     }
 }
